@@ -44,10 +44,12 @@ Para cumplir estrictamente con las pautas de rendimiento y restricciones lógica
 ```text
 fibonacci-primos-combinado/
 ├── index.html
+├── index2.html
 ├── LÉAME.md
 │
 ├── css/
-│   └── estilos.css
+│   └── styloe.css
+|   └── style2.css
 │
 └── js/
     └── script-combinado.js
