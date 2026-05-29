@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Web: Fibonacci y Números Primos</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Matemáticas que resuelven problemas</h1>
+            <h2>Fibonacci y Números Primos en la vida real</h2>
+            <div class="autor-box">
+                <p><strong>Estudiante:</strong> Miguel Felix Chavez Machaca </p>
+                <p><strong>Desafío Web 2006</strong></p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <section class="card">
+            <h3>Contexto del Problema Real</h3>
+            <p>
+                En el mundo real, los patrones matemáticos modelan fenómenos complejos. La <strong>sucesión de Fibonacci</strong> (donde cada número es la suma de los dos anteriores) describe con precisión el crecimiento biológico, la disposición de las hojas en las plantas y se aplica en finanzas para planes de ahorro escalables o proyecciones de inversión. 
+            </p>
+            <p>
+                Por otro lado, los <strong>números primos</strong> (divisibles únicamente entre 1 y sí mismos) constituyen la columna vertebral de la seguridad informática, la generación de claves criptográficas y la validación de códigos de acceso seguros en plataformas digitales.
+            </p>
+        </section>
+
+        <section class="card">
+            <h3>Explicación del Algoritmo (Lenguaje Sencillo)</h3>
+            <p>La aplicación ejecuta los procesos matemáticos de la siguiente manera:</p>
+            <div class="algoritmo-detalles">
+                <div class="algoritmo-item">
+                    <h4>1. Serie de Fibonacci</h4>
+                    <p>Inicia con dos variables fijas: <code>a = 0</code> y <code>b = 1</code>. Mediante un ciclo iterativo controlado, calcula el siguiente término sumando los dos anteriores (<code>c = a + b</code>). El algoritmo actualiza los valores en cada vuelta sin usar vectores intermedios, optimizando el uso de memoria en el navegador.</p>
+                </div>
+                <div class="algoritmo-item">
+                    <h4>2. Verificación de Números Primos</h4>
+                    <p>Para determinar si un número es primo, el sistema toma el valor y evalúa cuántas veces su residuo es cero al dividirlo entre todos los números desde el 1 hasta él mismo. Si el contador de divisiones exactas es exactamente igual a 2, el número se clasifica con éxito como primo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card formulario-seccion">
+            <h3>Configuración del Generador Matemático</h3>
+            <p class="instruccion">Selecciona la aplicación práctica que deseas ejecutar e ingresa los parámetros requeridos.</p>
+            
+            <form id="formularioMatematico" onsubmit="event.preventDefault(); ejecutarHerramienta();">
+                <div class="form-group">
+                    <label for="tipoOperacion">Aplicación Práctica / Tema:</label>
+                    <select id="tipoOperacion" onchange="actualizarInterfazFormulario()">
+                        <option value="ahorro">Fibonacci en Ahorro Progresivo (Simulación Mensual)</option>
+                        <option value="combinado">Fibonacci y Primos Combinados (Validación de Seguridad)</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="grupoCantidad">
+                    <label id="labelCantidad" for="valorEntrada">Cantidad de meses a simular:</label>
+                    <input type="number" id="valorEntrada" min="1" max="45" value="10" required>
+                    <small id="ayudaInput">Se recomienda un número entre 1 y 45 para evitar sobrecarga del procesador.</small>
+                </div>
+
+                <button type="submit" id="btnEjecutar">Calcular y Generar Solución</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h3>Resultado de la Solución</h3>
+            <div id="resultadoContenedor" class="resultado-vacio">
+                Presiona el botón "Calcular y Generar Solución" para desplegar el análisis matemático aquí en pantalla.
+            </div>
+        </section>
+
+        <section class="card conclusion-card">
+            <h3>Conclusión</h3>
+            <p id="textoConclusion">
+                La integración de herramientas interactivas nos permite visualizar el impacto real de las matemáticas. Al analizar las secuencias, descubrimos cómo una regla simple de crecimiento puede dictar la estructura de un plan financiero eficiente o cómo la distribución de números primos puede advertirnos qué nodos de una serie de datos son inherentemente más seguros para la arquitectura criptográfica moderna.
+            </p>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <h4>Entregables del Proyecto</h4>
+            <div class="links-container">
+                <a href="https://github.com/M1GUEL3/desafio-web#desafio-web" id="linkGit" target="_blank" class="btn-link">
+                    <i>📂</i> Enlace del Repositorio Git
+                </a>
+                <a href="index2.html" id="linkWeb" class="btn-link">
+                    <i>🌐</i> Enlace de la Página Publicada
+                </a>
+            </div>
+            <p class="copyright">&copy; 2026 - Desafío Web Matemática Aplicada. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
